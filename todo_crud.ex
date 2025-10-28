@@ -46,10 +46,10 @@ end
 # todo_list = TodoList.new() |> TodoList.add_entry(%{date: ~D[2023-12-19], title: "Dentist"}) |> TodoList.add_entry(%{date: ~D[2023-12-20], title: "Shopping"}) |> TodoList.add_entry(%{date: ~D[2023-12-19], title: "Movies"})
 # TodoList.entries(todo_list, ~D[2023-12-19])
 
-# TodoList.add_entry(todo_list, %{date: ~D[2023-12-21], title: "Gym"})
-# TodoList.add_entry(todo_list, %{date: ~D[2025-10-19], title: "Bowling"})
+# todo_list = TodoList.add_entry(todo_list, %{date: ~D[2023-12-21], title: "Gym"})
+# todo_list = TodoList.add_entry(todo_list, %{date: ~D[2025-10-19], title: "Bowling"})
 
-# TodoList.update_entry(todo_list, 1, &Map.put(&1, :date, ~D[2023-12-20]))
+# todo_list = TodoList.update_entry(todo_list, 1, &Map.put(&1, :date, ~D[2025-12-20]))
 
 # todo_list = %{ 1 => %{date: ~D[2023-12-19], title: "Dentist"}, 2 => %{date: ~D[2023-12-20], title: "Shopping"}, 3 => %{date: ~D[2023-12-19], title: "Movies"}}
 
