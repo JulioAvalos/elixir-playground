@@ -48,6 +48,8 @@ end
 # todo_list = Stream.map(format_dates, fn {date_struct, task} -> %{date: date_struct, title: task} end)
 # Enum.to_list(content) < se hace porque los Streams son perezosos y no se ejecutan hasta que se les pide el resultado
 
+# TodoList.CsvImporter.import("todos.csv")
+
 # CSV importer module
 defmodule TodoList.CsvImporter do
   def import(filename \\ "todos.csv") do
