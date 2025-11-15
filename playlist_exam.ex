@@ -22,7 +22,7 @@ defmodule Playlist do
       Enum.map(
         playlist.tracks,
         fn track ->
-          if track.id === track_id do
+          if track.id == track_id do
             %{track | liked: true}
           else
             track
