@@ -23,7 +23,8 @@
 #   ]
 # }
 
-# library = Library.add_book(library, 1, "Book D")
+# library = Library.add_book(library, 1, "Book G")
+# library = Library.add_book(library, 2, "Book F")
 # library = Library.mark_available(library, 102)
 # library = Library.mark_available(library, 103)
 # library = Library.mark_unavailable(library, 201)
