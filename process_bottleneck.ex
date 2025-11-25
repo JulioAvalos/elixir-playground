@@ -1,0 +1,36 @@
+defmodule Server do
+  def start do
+    spawn(fn -> loop() end)
+  end
+
+  def send_msg(server, message) do
+    send(server, {self(), message})
+
+    receive do
+      {:response, response} -> response
+    end
+  end
+
+  def loop do
+    receive do
+      {caller, msg} ->
+        Process.sleep(1000)  # Simulate bottleneck
+        send(caller, {:response, msg})
+    end
+
+    loop()
+  end
+
+end
+
+# server = Server.start()
+# Enum.each(
+#   1..5,
+#   fn i ->
+#     spawn(fn ->
+#       IO.puts("Sending msg ##{i}")
+#       response = Server.send_msg(server, i)
+#       IO.puts("Response: #{response}")
+#     end)
+#   end
+# )
